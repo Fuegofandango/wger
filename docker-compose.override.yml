@@ -1,0 +1,13 @@
+# Example override file. Copy as docker-compose.override.yml and edit as needed
+
+services:
+
+  web:
+    env_file: !override
+      - ./config/prod.env
+      - ./config/my.env # Only add the variables that you have changed
+      
+  nginx:
+    ports: !override
+      - "8888:80"
+
