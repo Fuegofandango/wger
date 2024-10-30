@@ -8,7 +8,7 @@ services:
       - ./config/my.env # Only add the variables that you have changed
       
   nginx:
-   volumes: !override
+    volumes: !override
       - './config/nginx.conf:/etc/nginx/conf.d/default.conf'
       - static:/wger/static:ro
       - media:/wger/media:ro
